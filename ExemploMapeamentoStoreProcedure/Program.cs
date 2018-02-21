@@ -14,7 +14,8 @@ namespace ExemploMapeamentoStoreProcedure
                 {
                     Nome = "Nome do Cliente",
                     DataNascimento = DateTime.Now,
-                    CPF = "999.999.999-11"
+                    CPF = "999.999.999-11",
+                    Idade = 1
                 };
 
                 bd.Clientes.Add(cliente);
