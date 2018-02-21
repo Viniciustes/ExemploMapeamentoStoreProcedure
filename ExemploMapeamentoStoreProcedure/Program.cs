@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ExemploMapeamentoStoreProcedure.Data;
+using ExemploMapeamentoStoreProcedure.Entidades;
+using System;
 
 namespace ExemploMapeamentoStoreProcedure
 {
@@ -10,6 +8,18 @@ namespace ExemploMapeamentoStoreProcedure
     {
         static void Main(string[] args)
         {
+            using (BdContexto bd = new BdContexto())
+            {
+                var cliente = new Cliente()
+                {
+                    Nome = "Nome do Cliente",
+                    DataNascimento = DateTime.Now,
+                    CPF = "999.999.999-11"
+                };
+
+                bd.Clientes.Add(cliente);
+                bd.SaveChanges();
+            }
         }
     }
 }

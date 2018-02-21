@@ -1,0 +1,6 @@
+﻿Projeto para servir de exemplo de mapeamento de Store Procedure 
+utilizando EntityFramemork.
+
+Faz necessário instalação do Entity Framework, pode ser feito através do 
+Package Manager Console:
+Install-Package EntityFramework

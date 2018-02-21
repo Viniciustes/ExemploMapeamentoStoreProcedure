@@ -1,0 +1,17 @@
+﻿
+CREATE PROCEDURE SPU_Inserir_Cliente
+	@IdCliente uniqueidentifier,
+	@Nome nvarchar(50),
+	@DataNascimento datetime
+
+AS
+BEGIN
+	INSERT INTO [dbo].[Cliente]
+			   ([IdCliente]
+			   ,[Nome]
+			   ,[DataNascimento])
+		 VALUES
+			   (@IdCliente
+			   ,@Nome
+			   ,@DataNascimento)
+END
